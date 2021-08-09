@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href=" {{ url_for('static', filename='css/styles.css') }} ">
+        <title>SS Music | New Music</title>
+    </head>
+
+    <body>
+        
+        <section id="new">
+            <a href=""></a>
+            <img id="home" src=" {{ url_for('static', filename='img/logo3.png') }} " alt="">
+
+            <div id="card">
+                <h4>Editar Música</h4>
+
+                <form action="/edit/{{musica.id}}" method="POST">
+                
+                    <div class="label-flutuante">
+                        <input type="text" id="nome" name="nome" placeholder=" " required value = "{{musica.nome}}">
+                        <label for="nome">Nome</label>
+                    </div>
+                        
+
+                    <div class="label-flutuante">
+                        <input type="text" name="artista" id="artista" placeholder=" " required value = "{{musica.artista}}">
+                        <label for="artista">Artista</label>
+                    </div>
+
+                
+                    <div class="label-flutuante">
+                        <input type="text" name="link" id="link" placeholder=" " required value = "{{musica.link}}">
+                        <label for="link">Link</label>
+                    </div>
+
+                
+                    <div class="justify-center">
+                        <button type="submit">Atualizar</button>
+                    </div>
+                </form>
+            </div>
+            <a href=""></a>
+            <img id="gif" src="{{ url_for('static', filename='img/musica.gif') }}" alt="">
+
+        </section>    
+
+    </body>
+
+</html>
